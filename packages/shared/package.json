@@ -1,0 +1,65 @@
+{
+  "name": "sailmetrix-shared",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/history": "^4.7.2",
+    "@types/jest": "23.3.13",
+    "@types/node": "10.12.19",
+    "@types/react": "16.7.22",
+    "@types/react-dom": "16.0.11",
+    "change-case": "^3.1.0",
+    "luxon": "^1.11.3",
+    "react-powerplug": "^1.0.0",
+    "typescript": "3.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "compile": "tsc --emitDeclarationOnly && rollup -c",
+    "watch": "concurrently \"tsc --emitDeclarationOnly --watch\" \"rollup -cw\"",
+    "prepare": "npm run compile",
+    "start": "docz dev",
+    "build": "docz build",
+    "deploy": "firebase deploy --only hosting:styleguide --token=$FIREBASE_TOKEN --non-interactive --project ${PROJECT_TARGET}"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@emotion/core": "^10.0.7",
+    "@svgr/rollup": "^4.1.0",
+    "@types/luxon": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^1.2.0",
+    "acorn": "^6.0.7",
+    "babel-eslint": "^10.0.1",
+    "classnames": "^2.2.6",
+    "concurrently": "^4.1.0",
+    "docz": "^0.13.7",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^0.13.7",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "react": "^16.8.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-scss": "^1.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-url": "^2.2.0"
+  }
+}

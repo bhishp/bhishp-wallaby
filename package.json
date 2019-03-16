@@ -1,0 +1,18 @@
+{
+  "workspaces": "*",
+  "name": "sailmetrix",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "lerna": "^3.9.0"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "vessel": "concurrently \"lerna run --scope sailmetrix-shared watch --stream\" \"lerna run --scope vessel start --stream\"",
+    "ui": "lerna run --scope sailmetrix-shared start --stream",
+    "modules": "echo 'not implemented yet'"
+  }
+}
